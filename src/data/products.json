@@ -289,7 +289,7 @@
   },
   {
     "id": 19,
-    "type": "CREAM",
+    "type": "CRM",
     "name": "Beclomethasone Gentamicin tolnaftate Iodochlorhydr",
     "category": "Pharmaceutical Cream & Ointments",
     "price": "1000 INR/Box",
@@ -305,7 +305,7 @@
   },
   {
     "id": 20,
-    "type": "CREAM",
+    "type": "CRM",
     "name": "Foaming Toot Paste",
     "category": "Pharmaceutical Cream & Ointments",
     "price": "1000 INR/Box",
@@ -321,7 +321,7 @@
   },
   {
     "id": 21,
-    "type": "CREAM",
+    "type": "CRM",
     "name": "Potassium Nitrate Gel Pyoson K Gel",
     "category": "Pharmaceutical Cream & Ointments",
     "price": "1000 INR/Box",
@@ -337,7 +337,7 @@
   },
   {
     "id": 22,
-    "type": "CREAM",
+    "type": "CRM",
     "name": "Sodium Fusidate Ointment BP",
     "category": "Pharmaceutical Cream & Ointments",
     "price": "1000 INR/Box",
@@ -353,7 +353,7 @@
   },
   {
     "id": 23,
-    "type": "CREAM",
+    "type": "CRM",
     "name": "Analgesic Rubefacient Ointment Cream",
     "category": "Pharmaceutical Cream & Ointments",
     "price": "1000 INR/Box",
