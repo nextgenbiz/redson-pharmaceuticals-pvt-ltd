@@ -6,7 +6,7 @@
 
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 import products from "@/data/products.json";
 import {
   Search,
@@ -38,6 +38,9 @@ export default function ProductSection() {
     []
   );
 
+  const visibleFilters = filters.slice(0, 7);
+  const hiddenFilters = filters.slice(0);
+
   const filteredProducts = useMemo(() => {
     const s = searchTerm.toLowerCase();
 
@@ -61,6 +64,37 @@ export default function ProductSection() {
 
     return result;
   }, [searchTerm, activeFilter, sortOrder]);
+
+  const typeStyles = {
+    TAB: "bg-blue-100 text-blue-700",
+    SYP: "bg-green-100 text-green-700",
+    CAP: "bg-purple-100 text-purple-700",
+    CRM: "bg-pink-100 text-pink-700",
+    OIL: "bg-yellow-100 text-yellow-700",
+    SPN: "bg-orange-100 text-orange-700",
+    ORL: "bg-cyan-100 text-cyan-700",
+    API: "bg-gray-200 text-gray-700",
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -100,24 +134,59 @@ export default function ProductSection() {
         </div>
 
         {/* FILTERS */}
-        <div className="flex gap-2 overflow-x-auto pb-3 mb-6">
-          {filters.map((f) => (
+        <div className="flex items-center gap-2 w-full mb-6">
+          <div className="relative flex gap-2 overflow-x-auto scrollbar-hide">
+            {/* <div className="absolute pointer-events-none w-[20%] left-224 inset-0 bg-linear-[90deg,transparent_55%,white]"></div> */}
+            {visibleFilters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActiveFilter(f)}
+                className={`px-2 py-1 md:px-3 md:py-1 lg:px-4 lg:py-2 rounded-full text-sm whitespace-nowrap ${
+                  activeFilter === f
+                    ? "bg-slate-900 text-white"
+                    : "bg-white border hover:bg-slate-100"
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          <div
+            ref={dropdownRef}
+            className="relative flex items-center justify-center"
+          >
+            <div className="absolute pointer-events-none w-[100%] -left-18 md:-left-20 lg:-left-23 inset-0 bg-linear-[90deg,transparent_15%,white]"></div>
+
             <button
-              key={f}
-              onClick={() => setActiveFilter(f)}
-              className={`px-4 py-2 rounded-full text-sm whitespace-nowrap transition ${
-                activeFilter === f
-                  ? "bg-slate-900 text-white"
-                  : "bg-white border hover:bg-slate-100"
-              }`}
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex cursor-pointer px-2 py-1 md:px-3 md:py-1 lg:px-4 lg:py-2 border rounded-full text-sm whitespace-nowrap bg-white"
             >
-              {f}
+              <ChevronDown width={20} height={20} />
+              More
             </button>
-          ))}
+
+            {isOpen && (
+              <div className="absolute top-full right-0 mt-2 w-70 md:w-100 bg-white border rounded-xl shadow-lg p-2 z-10">
+                {hiddenFilters.map((f) => (
+                  <button
+                    key={f}
+                    onClick={() => {
+                      setActiveFilter(f);
+                      setIsOpen(false); // close after selection
+                    }}
+                    className="block w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100"
+                  >
+                    {f}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* PRODUCT LIST */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {filteredProducts.map((product) => {
             const open = openRow === product.id;
 
@@ -131,7 +200,7 @@ export default function ProductSection() {
               >
 
                 {/* TOP ROW */}
-                <div className="p-5 w-full flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0">
+                <div className="px-4 py-2 w-full flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0">
 
                   <div className="flex md:w-[50%] items-center gap-3">
 
@@ -153,7 +222,11 @@ export default function ProductSection() {
 
                   </div>
                   <div className="flex md:w-[10%] items-center justify-start md:justify-center gap-3">
-                    <div className="px-3 py-1 text-xs rounded-full bg-purple-100 text-purple-700 font-medium">
+                    <div
+                      className={`px-3 py-1 text-xs rounded-full font-medium ${
+                        typeStyles[product.type] || "text-purple-700 bg-purple-100"
+                      }`}
+                    >
                       {product.type}
                     </div>
                     <span className="flex md:hidden text-[#7C5993] font-semibold">
