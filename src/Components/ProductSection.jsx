@@ -98,7 +98,7 @@ export default function ProductSection() {
 
   return (
     <main className="min-h-screen bg-slate-50">
-      <section className="max-w-7xl mx-auto px-4 py-14">
+      <section className="max-w-[1400px] mx-auto px-4 py-14">
 
         {/* HEADER */}
         <div className="mx-auto max-w-[620px] mb-6 text-center">
@@ -110,11 +110,11 @@ export default function ProductSection() {
               Product
             </h2>
   
-            <h3 className="font-serif text-5xl italic text-cyan-400 md:text-6xl">
+            <h3 className="font-serif text-5xl italic text-[var(--primary)] md:text-6xl">
               Catalog
             </h3>
   
-            <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-cyan-400" />
+            <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-[var(--primary)]" />
   
             <p className="mt-10 text-xl leading-relaxed text-slate-400">
             Browse the full pharmaceutical catalogue by dosage form, therapeutic

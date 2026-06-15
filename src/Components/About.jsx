@@ -39,7 +39,7 @@ import {
   export default function About() {
     return (
       <section className="bg-[#f7f8fa] py-28">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-[1400px] px-4">
           {/* Heading */}
           <div className="mx-auto max-w-5xl text-center">
             <p className="mb-6 text-sm font-semibold uppercase tracking-[0.4em] text-sky-500">
@@ -50,7 +50,7 @@ import {
               Precision-Driven
             </h2>
   
-            <h3 className="mt-2 font-serif text-5xl italic text-[#14213d] md:text-6xl">
+            <h3 className="mt-2 font-serif text-4xl md:text-5xl italic text-[#14213d] lg:text-6xl">
               Pharmaceutical Manufacturing
             </h3>
   

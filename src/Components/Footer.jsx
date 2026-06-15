@@ -11,7 +11,7 @@ import Link from "next/link";
           </span>
         </div>
   
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-4 pt-16">
           <div className="grid gap-12 lg:grid-cols-4">
             {/* Company Info */}
             <div>
@@ -119,7 +119,7 @@ import Link from "next/link";
           <div className="mt-16 border-t border-white/10" />
   
           {/* Bottom */}
-          <div className="mt-10 flex flex-col gap-4 text-slate-500 md:flex-row md:items-center md:justify-between">
+          <div className="py-6 flex flex-col gap-4 text-slate-500 md:flex-row md:items-center md:justify-between">
             <p>
               © 2026 Ziora Pharmaceuticals. All rights reserved.
             </p>

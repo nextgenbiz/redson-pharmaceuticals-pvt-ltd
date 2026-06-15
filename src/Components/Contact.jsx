@@ -9,7 +9,7 @@ import {
   export default function Contact() {
     return (
       <section className="bg-[#071a36] py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-[1400px] px-4">
           {/* Heading */}
           <div className="mb-20 text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.4em] text-cyan-400">

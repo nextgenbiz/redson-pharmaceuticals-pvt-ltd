@@ -92,7 +92,7 @@ import {
           ))}
         </div>
   
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-4">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.4em] text-cyan-400">

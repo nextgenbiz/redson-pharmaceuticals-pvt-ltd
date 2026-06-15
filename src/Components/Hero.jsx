@@ -40,7 +40,7 @@ import {
           }}
         />
   
-        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
+        <div className="relative mx-auto max-w-[1400px] px-6 py-16 lg:py-20">
           {/* Badge */}
           <div className="inline-flex items-center rounded-full border border-sky-200 bg-white px-5 py-3 shadow-sm">
             <span className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-700">
@@ -50,11 +50,11 @@ import {
   
           {/* Content */}
           <div className="mt-8 max-w-4xl">
-            <h1 className="text-5xl font-extrabold leading-none tracking-tight text-slate-900 md:text-7xl">
+            <h1 className="text-5xl font-bold leading-none tracking-tight text-slate-900 md:text-7xl">
               Pharma manufacturing
               <br />
               for{" "}
-              <span className="text-blue-600">
+              <span className="text-blue-500">
                 tablets, capsules,
               </span>
               <br />
