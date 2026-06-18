@@ -23,6 +23,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background),var(--primary),var(--secondary);
   color: var(--foreground,--primary),var(--primary),var(--secondary);

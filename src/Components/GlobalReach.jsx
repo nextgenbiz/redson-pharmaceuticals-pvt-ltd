@@ -1,65 +1,198 @@
+import Image from "next/image";
+import { Globe2, PackageCheck, FileCheck } from "lucide-react";
+
 const stats = [
   {
+    icon: Globe2,
     value: "Global",
     label: "Export Support",
+    description:
+      "Supporting pharmaceutical businesses across international markets.",
   },
   {
+    icon: FileCheck,
     value: "100%",
     label: "Documentation Ready",
+    description:
+      "Regulatory-focused documentation and compliance support.",
   },
   {
+    icon: PackageCheck,
     value: "24/7",
     label: "Business Support",
+    description:
+      "Responsive customer service and operational assistance.",
   },
 ];
 
 export default function GlobalReach() {
   return (
-    <section className="bg-gradient-to-b from-slate-950 to-slate-900 py-32">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-10 text-center">
-        <span className="text-sm uppercase tracking-[0.3em] text-purple-300">
-          Global Reach
-        </span>
+    <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-24">
+      {/* Background Glow */}
+      <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-[var(--primary)]/10 blur-[140px]" />
+      <div className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-[var(--primary)]/5 blur-[140px]" />
 
-        <h2 className="mt-6 text-6xl font-bold text-white">
-          Delivering Healthcare
-          Beyond Borders.
-        </h2>
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
+        {/* Header */}
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="inline-flex items-center rounded-full border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-4 py-2.5">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
+              Global Reach
+            </span>
+          </div>
 
-        <p className="mx-auto mt-8 max-w-3xl text-xl text-slate-400">
-          Supporting pharmaceutical businesses with manufacturing,
-          regulatory support, packaging, and export-ready solutions.
-        </p>
+          <h2 className="mt-6 text-4xl font-bold leading-[0.95] tracking-[-0.04em] text-white md:text-6xl xl:text-[64px]">
+            Delivering Healthcare
+            <br />
+            Beyond Borders.
+          </h2>
 
-        {/* World Map Image */}
-        <div className="mt-20">
-          <img
-            src="/images/world-map.svg"
-            alt="Global Reach"
-            className="mx-auto opacity-80"
-          />
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-slate-400 md:text-lg">
+            Supporting pharmaceutical businesses with manufacturing,
+            regulatory assistance, packaging solutions, and export-ready
+            capabilities for domestic and international markets.
+          </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {stats.map((item) => (
-            <div
-              key={item.label}
-              className="rounded-[32px] border border-white/10 bg-white/[0.03] p-10"
-            >
-              <h3 className="text-5xl font-bold text-purple-300">
-                {item.value}
-              </h3>
+        {/* World Map */}
+        <div className="mt-14 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl md:p-8">
+          <div className="relative">
+            <Image
+              src="/images/world-map.svg"
+              alt="Global Reach"
+              width={1400}
+              height={600}
+              className="mx-auto w-full max-w-5xl opacity-80"
+            />
+          </div>
+        </div>
 
-              <p className="mt-3 uppercase tracking-[0.25em] text-slate-400">
-                {item.label}
-              </p>
-            </div>
-          ))}
+        {/* Stats */}
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {stats.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.label}
+                className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/30"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--primary)]/10">
+                  <Icon
+                    size={22}
+                    className="text-[var(--primary)]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-3xl font-bold text-white">
+                  {item.value}
+                </h3>
+
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--primary)]">
+                  {item.label}
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-slate-400">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom Banner */}
+        <div className="mt-16 rounded-[32px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl md:p-10">
+          <div className="text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[var(--primary)]">
+              Export-Focused Manufacturing
+            </p>
+
+            <h3 className="mt-3 text-3xl font-bold text-white">
+              Supporting Pharmaceutical Growth Across Markets
+            </h3>
+
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-slate-400">
+              From manufacturing and packaging to documentation and export
+              support, REDSON Pharmaceuticals helps healthcare brands expand
+              confidently into domestic and international markets.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+// const stats = [
+//   {
+//     value: "Global",
+//     label: "Export Support",
+//   },
+//   {
+//     value: "100%",
+//     label: "Documentation Ready",
+//   },
+//   {
+//     value: "24/7",
+//     label: "Business Support",
+//   },
+// ];
+
+// export default function GlobalReach() {
+//   return (
+//     <section className="bg-gradient-to-b from-slate-950 to-slate-900 py-32">
+//       <div className="mx-auto max-w-[1440px] px-6 lg:px-10 text-center">
+//         <span className="text-sm uppercase tracking-[0.3em] text-purple-300">
+//           Global Reach
+//         </span>
+
+//         <h2 className="mt-6 text-6xl font-bold text-white">
+//           Delivering Healthcare
+//           Beyond Borders.
+//         </h2>
+
+//         <p className="mx-auto mt-8 max-w-3xl text-xl text-slate-400">
+//           Supporting pharmaceutical businesses with manufacturing,
+//           regulatory support, packaging, and export-ready solutions.
+//         </p>
+
+//         {/* World Map Image */}
+//         <div className="mt-20">
+//           <img
+//             src="/images/world-map.svg"
+//             alt="Global Reach"
+//             className="mx-auto opacity-80"
+//           />
+//         </div>
+
+//         <div className="mt-16 grid gap-8 md:grid-cols-3">
+//           {stats.map((item) => (
+//             <div
+//               key={item.label}
+//               className="rounded-[32px] border border-white/10 bg-white/[0.03] p-10"
+//             >
+//               <h3 className="text-5xl font-bold text-purple-300">
+//                 {item.value}
+//               </h3>
+
+//               <p className="mt-3 uppercase tracking-[0.25em] text-slate-400">
+//                 {item.label}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 
 

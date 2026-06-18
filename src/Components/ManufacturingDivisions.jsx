@@ -1,224 +1,463 @@
+import Image from "next/image";
 import {
-  Pill,
-  Syringe,
-  FlaskConical,
-  Eye,
-  ShieldPlus,
-  ArrowRight,
+Pill,
+Syringe,
+FlaskConical,
+Eye,
+ShieldPlus,
+ArrowRight,
 } from "lucide-react";
 
 const capabilities = [
-  {
-    title: "Tablet Manufacturing",
-    subtitle: "Precision Solid Dosage Forms",
-    image: "/images/tablets.jpg",
-    description:
-      "Manufacturing solutions for coated tablets, chewable tablets, dispersible tablets, and sustained-release formulations.",
-    features: [
-      "Film Coated",
-      "Dispersible",
-      "Chewable",
-      "Sustained Release",
-    ],
-  },
-  {
-    title: "Capsule Manufacturing",
-    subtitle: "Reliable Capsule Production",
-    image: "/images/capsules.jpg",
-    description:
-      "Hard gelatin capsules and specialized formulations manufactured with strict quality controls and batch consistency.",
-    features: [
-      "Hard Gelatin",
-      "Pellet Capsules",
-      "Combination Products",
-      "Custom Formulations",
-    ],
-  },
-  {
-    title: "Injectable Manufacturing",
-    subtitle: "Sterile & Critical Care Solutions",
-    image: "/images/injectables.jpg",
-    description:
-      "Sterile manufacturing processes designed for injectable formulations with quality assurance at every stage.",
-    features: [
-      "Dry Powder",
-      "Liquid Injections",
-      "Sterile Filling",
-      "QC Tested",
-    ],
-  },
-  {
-    title: "Liquid Oral Manufacturing",
-    subtitle: "Pediatric & Adult Formulations",
-    image: "/images/liquid-orals.jpg",
-    description:
-      "Comprehensive manufacturing of syrups, suspensions, and oral liquid formulations.",
-    features: [
-      "Syrups",
-      "Suspensions",
-      "Oral Solutions",
-      "Nutraceuticals",
-    ],
-  },
-  {
-    title: "Eye Drops",
-    subtitle: "Specialized Ophthalmic Manufacturing",
-    image: "/images/eyedrops.jpg",
-    description:
-      "Sterile ophthalmic manufacturing supported by advanced quality systems and regulatory compliance.",
-    features: [
-      "Ophthalmic Solutions",
-      "Sterile Processing",
-      "Quality Assurance",
-      "Regulatory Support",
-    ],
-  },
-  {
-    title: "Veterinary Products",
-    subtitle: "Animal Healthcare Solutions",
-    image: "/images/veterinary.jpg",
-    description:
-      "Manufacturing support for veterinary healthcare formulations and private-label animal health products.",
-    features: [
-      "Veterinary Formulations",
-      "Private Label",
-      "Custom Packaging",
-      "Export Ready",
-    ],
-  },
+{
+title: "Tablet Manufacturing",
+subtitle: "Precision Solid Dosage Forms",
+image: "/images/tablets.jpg",
+description:
+"Manufacturing solutions for coated tablets, chewable tablets, dispersible tablets, and sustained-release formulations.",
+features: [
+"Film Coated",
+"Dispersible",
+"Chewable",
+"Sustained Release",
+],
+},
+{
+title: "Capsule Manufacturing",
+subtitle: "Reliable Capsule Production",
+image: "/images/capsules.jpg",
+description:
+"Hard gelatin capsules and specialized formulations manufactured with strict quality controls and batch consistency.",
+features: [
+"Hard Gelatin",
+"Pellet Capsules",
+"Combination Products",
+"Custom Formulations",
+],
+},
+{
+title: "Injectable Manufacturing",
+subtitle: "Sterile & Critical Care Solutions",
+image: "/images/injectables.jpg",
+description:
+"Sterile manufacturing processes designed for injectable formulations with quality assurance at every stage.",
+features: [
+"Dry Powder",
+"Liquid Injections",
+"Sterile Filling",
+"QC Tested",
+],
+},
+{
+title: "Liquid Oral Manufacturing",
+subtitle: "Pediatric & Adult Formulations",
+image: "/images/liquid-orals.jpg",
+description:
+"Comprehensive manufacturing of syrups, suspensions, and oral liquid formulations.",
+features: [
+"Syrups",
+"Suspensions",
+"Oral Solutions",
+"Nutraceuticals",
+],
+},
+{
+title: "Eye Drops",
+subtitle: "Specialized Ophthalmic Manufacturing",
+image: "/images/eyedrops.jpg",
+description:
+"Sterile ophthalmic manufacturing supported by advanced quality systems and regulatory compliance.",
+features: [
+"Ophthalmic Solutions",
+"Sterile Processing",
+"Quality Assurance",
+"Regulatory Support",
+],
+},
+{
+title: "Veterinary Products",
+subtitle: "Animal Healthcare Solutions",
+image: "/images/veterinary.jpg",
+description:
+"Manufacturing support for veterinary healthcare formulations and private-label animal health products.",
+features: [
+"Veterinary Formulations",
+"Private Label",
+"Custom Packaging",
+"Export Ready",
+],
+},
 ];
 
 const icons = [
-  Pill,
-  Pill,
-  Syringe,
-  FlaskConical,
-  Eye,
-  ShieldPlus,
+Pill,
+Pill,
+Syringe,
+FlaskConical,
+Eye,
+ShieldPlus,
 ];
 
 export default function ManufacturingCapabilities() {
-  return (
-    <section className="relative overflow-hidden bg-slate-950 py-32">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute left-20 top-20 h-[500px] w-[500px] rounded-full bg-purple-600/10 blur-[140px]" />
-        <div className="absolute bottom-0 right-20 h-[500px] w-[500px] rounded-full bg-violet-500/10 blur-[140px]" />
+return (
+<section id="manufacturingcapabilities" className="relative overflow-hidden bg-slate-950 py-20 lg:py-24">
+  {/* Background Effects */}
+  <div className="absolute inset-0">
+   <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-[var(--primary)]/10 blur-[140px]" />
+    <div className="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-[var(--primary)]/5 blur-[140px]" />
+  </div>
+
+  <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
+    {/* Header */}
+    <div className="max-w-5xl">
+      <div className="inline-flex items-center rounded-full border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-4 py-2.5">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
+          Manufacturing Capabilities
+        </span>
       </div>
 
-      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-10">
-        {/* Header */}
-        <div className="max-w-5xl">
-          <span className="inline-flex rounded-full border border-purple-500/20 bg-purple-500/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
-            Manufacturing Capabilities
-          </span>
+      <h2 className="mt-6 text-4xl font-bold leading-[0.95] tracking-[-0.04em] text-white md:text-6xl xl:text-[64px]">
+        Built Across
+        <br />
+        Multiple
+        <span className="text-[var(--primary)]">
+          {" "}
+          Dosage Forms.
+        </span>
+      </h2>
 
-          <h2 className="mt-8 text-6xl font-bold tracking-[-0.05em] text-white md:text-7xl xl:text-8xl">
-            Built Across
-            <br />
-            Multiple
-            <span className="text-purple-400"> Dosage Forms.</span>
-          </h2>
+      <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-400 md:text-lg">
+        Comprehensive pharmaceutical manufacturing capabilities
+        supported by advanced infrastructure, quality assurance
+        systems, and customer-focused production solutions.
+      </p>
+    </div>
 
-          <p className="mt-8 max-w-4xl text-xl leading-relaxed text-slate-400">
-            Comprehensive pharmaceutical manufacturing capabilities supported
-            by advanced infrastructure, quality assurance systems, and
-            customer-focused production solutions.
+    {/* Capability Grid */}
+    <div className="mt-16 grid gap-6 lg:grid-cols-3">
+      {capabilities.map((item, index) => {
+        const Icon = icons[index];
+
+        return (
+          <div
+            key={item.title}
+            className="group overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[var(--primary)]/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+          >
+            {/* Image */}
+            <div className="relative h-[240px] overflow-hidden">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover transition duration-700 group-hover:scale-110"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+
+              <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md">
+                <Icon
+                  size={22}
+                  className="text-[var(--primary)]"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--primary)]">
+                {item.subtitle}
+              </p>
+
+              <h3 className="text-2xl font-bold text-white">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 text-sm leading-7 text-slate-400">
+                {item.description}
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {item.features.map((feature) => (
+                  <span
+                    key={feature}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+
+              <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)] transition-all hover:gap-3">
+                Explore Capability
+
+                <ArrowRight size={16} />
+              </button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    {/* Bottom Banner */}
+    <div className="mt-16 rounded-[32px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl md:p-10">
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[var(--primary)]">
+            Integrated Manufacturing Solutions
+          </p>
+
+          <h3 className="mt-3 text-3xl font-bold text-white">
+            Contract Manufacturing, Private Labeling &
+            Export Support
+          </h3>
+
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-400">
+            Supporting pharmaceutical companies with scalable
+            manufacturing, packaging, quality assurance, and
+            international distribution capabilities.
           </p>
         </div>
 
-        {/* Capability Grid */}
-        <div className="mt-24 grid gap-8 lg:grid-cols-3">
-          {capabilities.map((item, index) => {
-            const Icon = icons[index];
-
-            return (
-              <div
-                key={item.title}
-                className="group overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/30"
-              >
-                {/* Image */}
-                <div className="relative h-[280px] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-
-                  <div className="absolute left-6 top-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md">
-                    <Icon size={24} className="text-purple-300" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-8">
-                  <p className="mb-3 text-sm uppercase tracking-[0.2em] text-purple-300">
-                    {item.subtitle}
-                  </p>
-
-                  <h3 className="text-3xl font-bold text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-5 leading-8 text-slate-400">
-                    {item.description}
-                  </p>
-
-                  <div className="mt-8 flex flex-wrap gap-2">
-                    {item.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-
-                  <button className="mt-8 inline-flex items-center gap-3 text-purple-300 transition hover:gap-4">
-                    <span className="font-semibold">
-                      Explore Capability
-                    </span>
-
-                    <ArrowRight size={18} />
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Bottom Banner */}
-        <div className="mt-24 rounded-[40px] border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">
-                Integrated Manufacturing Solutions
-              </p>
-
-              <h3 className="mt-4 text-4xl font-bold text-white">
-                Contract Manufacturing, Private Labeling &
-                Export Support
-              </h3>
-
-              <p className="mt-4 max-w-3xl text-lg text-slate-400">
-                Supporting pharmaceutical companies with scalable
-                manufacturing, packaging, quality assurance, and
-                international distribution capabilities.
-              </p>
-            </div>
-
-            <button className="rounded-full bg-purple-600 px-8 py-4 font-semibold text-white transition hover:bg-purple-500">
-              Request Manufacturing Quote
-            </button>
-          </div>
-        </div>
+        <button className="rounded-full bg-[var(--primary)] px-6 py-3.5 text-sm font-semibold text-white transition hover:opacity-90">
+          Request Manufacturing Quote
+        </button>
       </div>
-    </section>
-  );
+    </div>
+  </div>
+</section>
+
+);
 }
+
+
+
+
+
+
+
+
+
+// import {
+//   Pill,
+//   Syringe,
+//   FlaskConical,
+//   Eye,
+//   ShieldPlus,
+//   ArrowRight,
+// } from "lucide-react";
+
+// const capabilities = [
+//   {
+//     title: "Tablet Manufacturing",
+//     subtitle: "Precision Solid Dosage Forms",
+//     image: "/images/tablets.jpg",
+//     description:
+//       "Manufacturing solutions for coated tablets, chewable tablets, dispersible tablets, and sustained-release formulations.",
+//     features: [
+//       "Film Coated",
+//       "Dispersible",
+//       "Chewable",
+//       "Sustained Release",
+//     ],
+//   },
+//   {
+//     title: "Capsule Manufacturing",
+//     subtitle: "Reliable Capsule Production",
+//     image: "/images/capsules.jpg",
+//     description:
+//       "Hard gelatin capsules and specialized formulations manufactured with strict quality controls and batch consistency.",
+//     features: [
+//       "Hard Gelatin",
+//       "Pellet Capsules",
+//       "Combination Products",
+//       "Custom Formulations",
+//     ],
+//   },
+//   {
+//     title: "Injectable Manufacturing",
+//     subtitle: "Sterile & Critical Care Solutions",
+//     image: "/images/injectables.jpg",
+//     description:
+//       "Sterile manufacturing processes designed for injectable formulations with quality assurance at every stage.",
+//     features: [
+//       "Dry Powder",
+//       "Liquid Injections",
+//       "Sterile Filling",
+//       "QC Tested",
+//     ],
+//   },
+//   {
+//     title: "Liquid Oral Manufacturing",
+//     subtitle: "Pediatric & Adult Formulations",
+//     image: "/images/liquid-orals.jpg",
+//     description:
+//       "Comprehensive manufacturing of syrups, suspensions, and oral liquid formulations.",
+//     features: [
+//       "Syrups",
+//       "Suspensions",
+//       "Oral Solutions",
+//       "Nutraceuticals",
+//     ],
+//   },
+//   {
+//     title: "Eye Drops",
+//     subtitle: "Specialized Ophthalmic Manufacturing",
+//     image: "/images/eyedrops.jpg",
+//     description:
+//       "Sterile ophthalmic manufacturing supported by advanced quality systems and regulatory compliance.",
+//     features: [
+//       "Ophthalmic Solutions",
+//       "Sterile Processing",
+//       "Quality Assurance",
+//       "Regulatory Support",
+//     ],
+//   },
+//   {
+//     title: "Veterinary Products",
+//     subtitle: "Animal Healthcare Solutions",
+//     image: "/images/veterinary.jpg",
+//     description:
+//       "Manufacturing support for veterinary healthcare formulations and private-label animal health products.",
+//     features: [
+//       "Veterinary Formulations",
+//       "Private Label",
+//       "Custom Packaging",
+//       "Export Ready",
+//     ],
+//   },
+// ];
+
+// const icons = [
+//   Pill,
+//   Pill,
+//   Syringe,
+//   FlaskConical,
+//   Eye,
+//   ShieldPlus,
+// ];
+
+// export default function ManufacturingCapabilities() {
+//   return (
+//     <section className="relative overflow-hidden bg-slate-950 py-32">
+//       {/* Background Effects */}
+//       <div className="absolute inset-0">
+//         <div className="absolute left-20 top-20 h-[500px] w-[500px] rounded-full bg-purple-600/10 blur-[140px]" />
+//         <div className="absolute bottom-0 right-20 h-[500px] w-[500px] rounded-full bg-violet-500/10 blur-[140px]" />
+//       </div>
+
+//       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+//         {/* Header */}
+//         <div className="max-w-5xl">
+//           <span className="inline-flex rounded-full border border-purple-500/20 bg-purple-500/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
+//             Manufacturing Capabilities
+//           </span>
+
+//           <h2 className="mt-8 text-6xl font-bold tracking-[-0.05em] text-white md:text-7xl xl:text-8xl">
+//             Built Across
+//             <br />
+//             Multiple
+//             <span className="text-purple-400"> Dosage Forms.</span>
+//           </h2>
+
+//           <p className="mt-8 max-w-4xl text-xl leading-relaxed text-slate-400">
+//             Comprehensive pharmaceutical manufacturing capabilities supported
+//             by advanced infrastructure, quality assurance systems, and
+//             customer-focused production solutions.
+//           </p>
+//         </div>
+
+//         {/* Capability Grid */}
+//         <div className="mt-24 grid gap-8 lg:grid-cols-3">
+//           {capabilities.map((item, index) => {
+//             const Icon = icons[index];
+
+//             return (
+//               <div
+//                 key={item.title}
+//                 className="group overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/30"
+//               >
+//                 {/* Image */}
+//                 <div className="relative h-[280px] overflow-hidden">
+//                   <img
+//                     src={item.image}
+//                     alt={item.title}
+//                     className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+//                   />
+
+//                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+
+//                   <div className="absolute left-6 top-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md">
+//                     <Icon size={24} className="text-purple-300" />
+//                   </div>
+//                 </div>
+
+//                 {/* Content */}
+//                 <div className="p-8">
+//                   <p className="mb-3 text-sm uppercase tracking-[0.2em] text-purple-300">
+//                     {item.subtitle}
+//                   </p>
+
+//                   <h3 className="text-3xl font-bold text-white">
+//                     {item.title}
+//                   </h3>
+
+//                   <p className="mt-5 leading-8 text-slate-400">
+//                     {item.description}
+//                   </p>
+
+//                   <div className="mt-8 flex flex-wrap gap-2">
+//                     {item.features.map((feature) => (
+//                       <span
+//                         key={feature}
+//                         className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
+//                       >
+//                         {feature}
+//                       </span>
+//                     ))}
+//                   </div>
+
+//                   <button className="mt-8 inline-flex items-center gap-3 text-purple-300 transition hover:gap-4">
+//                     <span className="font-semibold">
+//                       Explore Capability
+//                     </span>
+
+//                     <ArrowRight size={18} />
+//                   </button>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+
+//         {/* Bottom Banner */}
+//         <div className="mt-24 rounded-[40px] border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl">
+//           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+//             <div>
+//               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">
+//                 Integrated Manufacturing Solutions
+//               </p>
+
+//               <h3 className="mt-4 text-4xl font-bold text-white">
+//                 Contract Manufacturing, Private Labeling &
+//                 Export Support
+//               </h3>
+
+//               <p className="mt-4 max-w-3xl text-lg text-slate-400">
+//                 Supporting pharmaceutical companies with scalable
+//                 manufacturing, packaging, quality assurance, and
+//                 international distribution capabilities.
+//               </p>
+//             </div>
+
+//             <button className="rounded-full bg-purple-600 px-8 py-4 font-semibold text-white transition hover:bg-purple-500">
+//               Request Manufacturing Quote
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 
 
