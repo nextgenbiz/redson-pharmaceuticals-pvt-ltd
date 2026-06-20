@@ -3,7 +3,7 @@ import CTA from "@/Components/CTA";
 import Contact from "@/Components/Contact";
 import GlobalReach from "@/Components/GlobalReach";
 import Hero from "@/Components/Hero";
-import ManufacturingDivisions from "@/Components/ManufacturingDivisions";
+import ManufacturingFacilities from "@/Components/ManufacturingFacilities";
 import ManufacturingProcess from "@/Components/ManufacturingProcess";
 import ProductSection from "@/Components/ProductSection";
 import QualityCompliance from "@/Components/QualityCompliance";
@@ -23,7 +23,7 @@ export default function Home() {
     <Hero/>
     <About/>
     {/* <ProductSection/> */}
-    <ManufacturingDivisions/>
+    <ManufacturingFacilities/>
     <Services/>
     <ContractManufacturing/>
     <ThirdPartyManufacturing/>

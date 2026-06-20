@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Factory,
   FlaskConical,
@@ -11,26 +12,26 @@ const pillars = [
     icon: Factory,
     title: "Advanced Manufacturing Infrastructure",
     description:
-      "State-of-the-art facilities equipped with modern machinery and scalable production systems for tablets, capsules, injectables, liquid orals and specialty formulations.",
+      "State-of-the-art GMP-compliant facilities equipped with modern machinery and scalable production systems for tablets, capsules, injectables, liquid orals, eye drops, and specialty formulations.",
   },
   {
     icon: FlaskConical,
     title: "Research, Quality & Regulatory Excellence",
     description:
-      "Dedicated R&D, QA and QC systems ensure innovation, process optimization, stringent testing, and adherence to global pharmaceutical quality standards.",
+      "Dedicated R&D, QA, and QC systems ensure product innovation, process optimization, stringent testing, and adherence to global pharmaceutical quality standards.",
   },
   {
     icon: Globe2,
     title: "Contract Manufacturing & Global Reach",
     description:
-      "Private labeling, customized packaging, export solutions and contract manufacturing support pharmaceutical companies across domestic and international markets.",
+      "Private labeling, customized packaging, export solutions, and third-party manufacturing support pharmaceutical companies across domestic and international markets.",
   },
 ];
 
 const stats = [
   {
-    value: "6+",
-    label: "Dosage Forms",
+    value: "8+",
+    label: "Product Categories",
   },
   {
     value: "100%",
@@ -41,8 +42,8 @@ const stats = [
     label: "Export Ready",
   },
   {
-    value: "24/7",
-    label: "Business Support",
+    value: "R&D",
+    label: "Innovation Support",
   },
 ];
 
@@ -55,19 +56,19 @@ export default function About() {
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
         {/* Heading */}
-        <div className="flex items-center justify-center">
-          <div className="max-w-5xl text-center">
+        <div className="flex items-center justify-start">
+          <div className="max-w-5xl ">
             <div className="inline-flex items-center rounded-full border border-[var(--primary)]/15 bg-[var(--primary)]/5 px-4 py-2.5">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
                 About Redson Pharmaceuticals
               </span>
             </div>
 
-            <h2 className="mt-6 text-4xl font-bold leading-[0.95] tracking-[-0.04em] text-slate-900 md:text-6xl xl:text-[64px]">
+            <h2 className="mt-4 text-4xl font-bold leading-[0.96] tracking-[-0.04em] text-slate-900 md:text-6xl xl:text-[64px]">
               Built for
               <br />
               <span className="text-[var(--primary)]">
-                Healthcare Brands.
+                Global Healthcare Brands.
               </span>
             </h2>
 
@@ -79,11 +80,11 @@ export default function About() {
               services.
             </p>
 
-            <p className="mt-4 max-w-4xl text-base leading-relaxed text-slate-500">
+            <p className="mt-4 max-w-5xl text-base leading-relaxed text-slate-500">
               From formulation development and contract manufacturing to
               private labeling, customized packaging, and export support,
-              we help pharmaceutical companies launch and scale products
-              with confidence across domestic and international markets.
+              we help pharmaceutical companies build, launch, and scale
+              products with quality, compliance, and reliability.
             </p>
           </div>
         </div>
@@ -113,8 +114,8 @@ export default function About() {
 
                 <p className="mt-2 max-w-lg text-sm leading-relaxed text-white/80">
                   Comprehensive capabilities across formulation,
-                  manufacturing, packaging, quality assurance and export
-                  solutions.
+                  manufacturing, packaging, quality assurance, and
+                  export solutions.
                 </p>
               </div>
             </div>
@@ -131,7 +132,7 @@ export default function About() {
                     key={index}
                     className="group flex gap-5 border-b border-slate-200 pb-8 last:border-0"
                   >
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--primary)]/10 transition-all duration-300 group-hover:bg-[var(--primary)] group-hover:text-white">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--primary)]/10 transition-all duration-300 group-hover:bg-[var(--primary)]">
                       <Icon
                         size={24}
                         className="text-[var(--primary)] transition-colors duration-300 group-hover:text-white"
@@ -154,14 +155,17 @@ export default function About() {
 
             {/* CTA */}
             <div className="mt-10">
-              <button className="group flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-500 hover:-translate-y-0.5 hover:bg-slate-800">
+              <Link
+                href="/services"
+                className="group flex w-fit items-center gap-2 rounded-full bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-500 hover:-translate-y-0.5 hover:bg-slate-800"
+              >
                 Explore Manufacturing Capabilities
 
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
