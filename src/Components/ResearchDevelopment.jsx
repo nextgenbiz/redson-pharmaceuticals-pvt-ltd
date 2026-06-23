@@ -35,12 +35,9 @@ const researchItems = [
 export default function ResearchDevelopment() {
   return (
     <section
-      id="#researchdevelopment"
+      id="researchdevelopment"
       className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14"
     >
-      {/* Background */}
-      <div className="absolute left-0 top-0 h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] lg:h-[320px] lg:w-[320px] rounded-full bg-[var(--primary)]/5 blur-[120px]" />
-
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-4xl">
@@ -73,7 +70,7 @@ export default function ResearchDevelopment() {
               <div key={item.title} className="relative">
                 {/* Connector line */}
                 {index !== researchItems.length - 1 && (
-                  <div className="absolute left-[76px] top-7 hidden h-px w-[calc(100%-76px)] bg-slate-200 xl:block" />
+                  <div className="absolute left-[76px] top-7 hidden h-px w-[calc(100%-76px)] bg-[var(--primary)] xl:block" />
                 )}
 
                 <div className="relative">
@@ -83,7 +80,7 @@ export default function ResearchDevelopment() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-slate-200 bg-white shrink-0">
+                    <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-[var(--primary)] bg-white shrink-0">
                       <Icon
                         size={20}
                         className="text-[var(--primary)]"

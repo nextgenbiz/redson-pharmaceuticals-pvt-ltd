@@ -1,7 +1,6 @@
 import About from "@/Components/About";
 import CTA from "@/Components/CTA";
 import Contact from "@/Components/Contact";
-import GlobalReach from "@/Components/GlobalReach";
 import Hero from "@/Components/Hero";
 import ManufacturingFacilities from "@/Components/ManufacturingFacilities";
 import ManufacturingProcess from "@/Components/ManufacturingProcess";
@@ -36,7 +35,6 @@ export default function Home() {
     <FAQs/>
     {/* <WhyChooseUs/> */}
     {/* <ManufacturingProcess/> */}
-    {/* <GlobalReach/> */}
     {/* <CTA/> */}
     </>
   );

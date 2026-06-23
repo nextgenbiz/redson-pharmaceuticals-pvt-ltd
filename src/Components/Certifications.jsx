@@ -38,13 +38,9 @@ const icons = [
 export default function Certifications() {
   return (
     <section
-      id="#certifications"
+      id="certifications"
       className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14"
     >
-      {/* Background Glow */}
-      <div className="absolute left-0 top-0 h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] lg:h-[320px] lg:w-[320px] rounded-full bg-[var(--primary)]/5 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-[180px] w-[180px] sm:h-[220px] sm:w-[220px] lg:h-[280px] lg:w-[280px] rounded-full bg-blue-100/40 blur-[100px]" />
-
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         {/* Heading */}
         <div>
@@ -64,7 +60,7 @@ export default function Certifications() {
         </div>
 
         {/* Trust Wall */}
-        <div className="mt-10 sm:mt-12 lg:mt-14 divide-y divide-slate-200 rounded-[24px] sm:rounded-[28px] border border-slate-200 bg-slate-50 shadow-sm">
+        <div className="mt-10 sm:mt-12 lg:mt-14 divide-y divide-[var(--primary)]/40 rounded-[24px] sm:rounded-[28px] border border-[var(--primary)]/40 bg-slate-50 shadow-sm">
           {certifications.map((item, index) => {
             const Icon = icons[index];
 

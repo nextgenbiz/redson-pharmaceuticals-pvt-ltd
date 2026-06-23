@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
+  Phone,
 } from "lucide-react";
 
 const features = [
@@ -14,12 +15,9 @@ const features = [
 export default function ContractManufacturing() {
   return (
     <section
-      id="#contractmanufacturing"
+      id="contractmanufacturing"
       className="relative overflow-hidden bg-white py-12 sm:py-14 lg:py-16"
     >
-      {/* Background */}
-      <div className="absolute left-0 top-0 h-[180px] w-[180px] sm:h-[220px] sm:w-[220px] lg:h-[280px] lg:w-[280px] rounded-full bg-[var(--primary)]/5 blur-[100px]" />
-
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         <div className="grid items-end gap-8 sm:gap-10 lg:grid-cols-2">
           {/* Left */}
@@ -49,14 +47,14 @@ export default function ContractManufacturing() {
           </div>
 
           {/* Right */}
-          <div className="rounded-[24px] sm:rounded-[28px] border border-slate-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm">
+          <div className="rounded-[24px] sm:rounded-[28px] border border-[var(--primary)] bg-white p-5 sm:p-6 md:p-8 shadow-sm">
             <div className="grid gap-4 sm:grid-cols-2">
               {features.map((feature) => (
                 <div
                   key={feature}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 p-4 transition-all duration-300 hover:border-[var(--primary)]/20 hover:bg-white"
+                  className="rounded-2xl border border-[var(--primary)]/20 bg-slate-50 p-4 transition-all duration-300 hover:border-[var(--primary)] hover:bg-white"
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-center gap-3">
                     <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/10">
                       <CheckCircle2
                         size={16}
@@ -71,14 +69,17 @@ export default function ContractManufacturing() {
                 </div>
               ))}
             </div>
-
-            <Link
-              href="/contact"
-              className="mt-6 sm:mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-[var(--primary)] transition-all duration-300 hover:gap-3"
+            <a
+              href="#contact"
+              className="group mt-6 sm:mt-8 inline-flex w-fit items-center gap-3 text-sm font-semibold text-[var(--primary)] transition-all duration-300"
             >
-              Learn More
-              <ArrowRight size={16} />
-            </Link>
+              Call Now
+              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/10">
+              <Phone size={16} 
+              className="group-hover:rotate-360 transition-all duration-500"
+              />
+              </div>
+            </a>
           </div>
         </div>
       </div>

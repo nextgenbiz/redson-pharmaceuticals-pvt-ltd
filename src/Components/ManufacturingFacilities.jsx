@@ -203,7 +203,7 @@ export default function ManufacturingFacilities() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="mt-6 overflow-hidden rounded-[24px] sm:rounded-[28px] border border-slate-200 bg-slate-50 p-5 sm:p-6 md:p-8">
+        <div className="mt-6 overflow-hidden rounded-[24px] sm:rounded-[28px] border border-[var(--primary)]/40 bg-slate-50 p-5 sm:p-6 md:p-8">
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="mb-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] sm:tracking-[0.3em] text-slate-500">

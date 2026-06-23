@@ -54,7 +54,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/logo-purple-temp-01.png"
+              src="/logo-header-purple-temp-01.png"
               alt="Ziora Pharmaceutical"
               width={180}
               height={60}

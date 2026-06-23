@@ -33,10 +33,6 @@ export default function Contact() {
     <section
       id="contact" className="relative overflow-hidden bg-white py-12"
     >
-      {/* Background */}
-      <div className="absolute left-0 top-0 h-[320px] w-[320px] rounded-full bg-[var(--primary)]/5 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-[280px] w-[280px] rounded-full bg-blue-100/40 blur-[100px]" />
-
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Left Side */}
@@ -64,7 +60,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Details */}
-            <div className="mt-10 rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+            <div className="mt-10 rounded-[28px] border border-[var(--primary)]/40 bg-[var(--primary)]/5 p-6">
               <div className="space-y-6">
                 {contactInfo.map((item) => {
                   const Icon = item.icon;
@@ -97,19 +93,19 @@ export default function Contact() {
           </div>
 
           {/* Right Side Form */}
-          <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6 md:p-8">
+          <div className="rounded-[28px] border border-[var(--primary)]/40 bg-[var(--primary)]/5 p-6 md:p-8">
             <form className="space-y-5">
               <div className="grid gap-5 md:grid-cols-2">
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="h-14 rounded-2xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
+                  className="h-14 rounded-2xl border border-[var(--primary)]/20 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
                 />
 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="h-14 rounded-2xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
+                  className="h-14 rounded-2xl border border-[var(--primary)]/20 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
                 />
               </div>
 
@@ -117,20 +113,20 @@ export default function Contact() {
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="h-14 rounded-2xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
+                  className="h-14 rounded-2xl border border-[var(--primary)]/20 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
                 />
 
                 <input
                   type="text"
                   placeholder="Company Name"
-                  className="h-14 rounded-2xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
+                  className="h-14 rounded-2xl border border-[var(--primary)]/20 bg-white px-4 text-sm outline-none focus:border-[var(--primary)]"
                 />
               </div>
 
               <textarea
                 rows={6}
                 placeholder="Tell us about your requirements..."
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-4 text-sm outline-none focus:border-[var(--primary)]"
+                className="w-full rounded-2xl border border-[var(--primary)]/20 bg-white px-4 py-4 text-sm outline-none focus:border-[var(--primary)]"
               />
 
               <button className="rounded-full bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:opacity-90">

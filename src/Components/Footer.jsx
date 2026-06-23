@@ -5,6 +5,7 @@ import {
   Mail,
   MapPin,
   ArrowRight,
+  Factory,
 } from "lucide-react";
 
 const quickLinks = [
@@ -19,7 +20,7 @@ const quickLinks = [
 const services = [
   { label: "Contract Manufacturing", href: "#contractmanufacturing" },
   { label: "Third Party Manufacturing", href: "#thirdpartymanufacturing" },
-  { label: "Private Labeling", href: "#manufacturingcapabilities" },
+  { label: "Private Labeling", href: "#services" },
   { label: "Export Services", href: "#exportservices" },
 ];
 
@@ -39,13 +40,22 @@ export default function Footer() {
             </h3>
           </div>
 
-          <Link
-            href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:scale-[1.02]"
-          >
-            Request Consultation
-            <ArrowRight size={16} />
-          </Link>
+          <div className="flex gap-3 divide-x divide-[red]">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-transparent px-6 py-3 text-sm font-semibold text-white border border-[white] transition hover:scale-[1.02]"
+            >
+              Request Consultation
+              <ArrowRight size={16} />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-[var(--primary)] px-6 py-3 text-sm font-semibold transition hover:scale-[1.02]"
+            >
+              Call Now
+              <Phone size={16} />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -57,12 +67,12 @@ export default function Footer() {
               {/* Logo */}
               <Link href="#hero" className="shrink-0">
                 <Image
-                  src="/logo-purple-temp-01.png"
+                  src="/logo-footer-white-temp-01.png"
                   alt="Redson Pharmaceutical"
                   width={1000}
                   height={1000}
                   priority
-                  className="w-auto h-[120px]"
+                  className="w-auto h-[52px]"
                 />
               </Link>
             </div>
@@ -118,34 +128,52 @@ export default function Footer() {
             </h4>
 
             <div className="mt-5 space-y-5">
-              <div className="flex items-start gap-3">
+              <div className="grid grid-cols-[0.05fr_1fr] items-start gap-3">
                 <Phone
                   size={16}
                   className="mt-1 text-[var(--primary)]"
                 />
-                <span className="text-sm text-white/70">
-                  +91 XXXXX XXXXX
-                </span>
+                <a href="tel:918866003844" className="text-sm text-white/70">
+                  +91 8866003844
+                </a>
               </div>
 
-              <div className="flex items-start gap-3">
+              <div className="grid grid-cols-[0.05fr_1fr] items-start gap-3">
                 <Mail
                   size={16}
                   className="mt-1 text-[var(--primary)]"
                 />
                 <span className="text-sm text-white/70">
-                  info@redsonpharma.com
+                  info@redsongroup.in
                 </span>
               </div>
 
-              <div className="flex items-start gap-3">
+              <div className="grid grid-cols-[0.05fr_1fr] items-start gap-3">
                 <MapPin
                   size={16}
                   className="mt-1 text-[var(--primary)]"
                 />
-                <span className="text-sm text-white/70">
-                  Ahmedabad, Gujarat, India
+                <p className="text-sm">
+                  Registered Office : 
+                  {" "}
+                <span className="text-white/70">
+                  2, Radhe Kutir Bunglows, Near Safal Bunglows, Village Bhat, Dist.- Gandhinagar - 382428, Gujarat, India
                 </span>
+                </p>
+              </div>
+
+              <div className="grid grid-cols-[0.05fr_1fr] items-start gap-3">
+                <Factory
+                  size={16}
+                  className="mt-1 text-[var(--primary)]"
+                />
+                <p className="text-sm">
+                  Factory Address : 
+                  {" "}
+                <span className="text-sm text-white/70">
+                  Survey No. 1682, Vijapur-Ransipur Road, Sardarpur, Taluka Vijapur, Dist.- Mehsana - 382860, Gujarat, India.
+                </span>
+                </p>
               </div>
             </div>
           </div>

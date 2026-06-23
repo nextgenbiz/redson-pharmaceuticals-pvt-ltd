@@ -29,7 +29,7 @@ const qualityItems = [
 export default function QualityCompliance() {
   return (
     <section
-      id="#qualitycompliance"
+      id="qualitycompliance"
       className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14"
     >
       {/* Background Effects */}
@@ -62,14 +62,16 @@ export default function QualityCompliance() {
               consistency, safety, and regulatory compliance.
             </p>
 
-            <button className="group mt-6 sm:mt-8 inline-flex min-h-[48px] w-full sm:w-fit items-center justify-center gap-2 rounded-full bg-slate-900 px-5 sm:px-6 py-3 sm:py-3.5 text-sm font-semibold text-white transition-all duration-500 hover:-translate-y-0.5 hover:bg-slate-800 active:scale-[0.98]">
-              Learn More
-
+            <a
+              href="#contact"
+              className="group mt-6 flex w-full sm:w-fit min-h-[48px] items-center justify-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Contact Now
               <ArrowRight
-                size={16}
+                size={15} 
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </button>
+            </a>
           </div>
 
           {/* Right Compliance Rail */}

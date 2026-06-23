@@ -30,10 +30,6 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-16"
     >
-      {/* Background Glow */}
-      <div className="absolute left-0 top-0 h-[220px] w-[220px] sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px] rounded-full bg-[var(--primary)]/5 blur-[130px]" />
-      <div className="absolute right-0 bottom-0 h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[350px] lg:w-[350px] rounded-full bg-blue-100/40 blur-[130px]" />
-
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-5xl">
@@ -59,22 +55,22 @@ export default function Services() {
         </div>
 
         {/* Services List */}
-        <div className="mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-[24px] sm:rounded-[28px] border border-slate-200 bg-white shadow-sm">
+        <div className="mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-[24px] sm:rounded-[28px] border border-[var(--primary)]/40 bg-white shadow-sm">
           {services.map((service, index) => (
             <div
               key={service.title}
               className={`group relative transition-all duration-300 hover:bg-slate-50 ${
                 index !== services.length - 1
-                  ? "border-b border-slate-200"
+                  ? "border-b border-[var(--primary)]/40"
                   : ""
               }`}
             >
-              <div className="absolute left-0 top-0 h-full w-px bg-slate-200 transition-all duration-300 group-hover:bg-[var(--primary)]" />
+              <div className="absolute left-0 top-0 h-full w-px md:w-[50px] bg-[var(--primary)]/20 transition-all duration-300 group-hover:bg-[var(--primary)]" />
 
               <div className="flex flex-col gap-5 sm:gap-6 py-6 sm:py-8 pl-4 sm:pl-6 pr-4 md:flex-row md:items-center md:justify-between">
                 {/* Left Content */}
                 <div className="flex gap-4 sm:gap-6">
-                  <span className="text-sm font-semibold text-[var(--primary)] shrink-0">
+                  <span className="text-sm z-1 font-semibold text-[var(--primary)] md:group-hover:text-[white] shrink-0">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -107,7 +103,7 @@ export default function Services() {
         </div>
 
         {/* Bottom Inline CTA */}
-        <div className="mt-6 flex flex-col gap-5 border-t border-slate-200 pt-6 sm:pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-6 flex flex-col gap-5 border-t border-[var(--primary)]/40 pt-6 sm:pt-8 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[var(--primary)]">
               Partnership Driven Manufacturing
@@ -119,13 +115,16 @@ export default function Services() {
               healthcare brands launch and scale products efficiently.
             </p>
           </div>
-
-          <Link
-            href="/contact"
-            className="flex w-full sm:w-fit min-h-[48px] items-center justify-center rounded-full bg-slate-900 px-5 sm:px-6 py-3 sm:py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90 active:scale-[0.98]"
-          >
-            Request Consultation
-          </Link>
+          <a
+              href="#contact"
+              className="group flex w-full sm:w-fit min-h-[48px] items-center justify-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Request Consultation
+              <ArrowRight
+                size={15} 
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </a>
         </div>
       </div>
     </section>

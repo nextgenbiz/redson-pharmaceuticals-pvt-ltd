@@ -30,13 +30,9 @@ const exportItems = [
 export default function ExportServices() {
   return (
     <section
-      id="#exportservices"
+      id="exportservices"
       className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14"
     >
-      {/* Background Glow */}
-      <div className="absolute left-0 top-0 h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] lg:h-[320px] lg:w-[320px] rounded-full bg-[var(--primary)]/5 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-[180px] w-[180px] sm:h-[220px] sm:w-[220px] lg:h-[280px] lg:w-[280px] rounded-full bg-blue-100/40 blur-[100px]" />
-
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-4xl">
@@ -69,13 +65,13 @@ export default function ExportServices() {
             return (
               <div key={item.title} className="relative">
                 {/* Connector Line */}
-                {index !== exportItems.length - 1 && (
-                  <div className="absolute left-[64px] top-6 hidden h-px w-full bg-slate-200 md:block" />
+                {index !== exportItems.length && (
+                  <div className="absolute left-[56px] top-6 hidden h-px w-[calc(100%-80px)] bg-[var(--primary)] md:block" />
                 )}
 
                 <div className="relative">
                   {/* Icon */}
-                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 transition-all duration-300 hover:border-[var(--primary)]/20 hover:bg-white">
+                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-[var(--primary)] bg-slate-50 transition-all duration-300">
                     <Icon
                       size={20}
                       className="text-[var(--primary)]"
@@ -97,13 +93,13 @@ export default function ExportServices() {
         </div>
 
         {/* CTA */}
-        <Link
-          href="/contact"
+        <a
+          href="#contact"
           className="mt-8 sm:mt-10 inline-flex min-h-[48px] w-full sm:w-fit items-center justify-center gap-2 rounded-full border border-[var(--primary)] px-5 sm:px-6 py-3 text-sm font-semibold text-[var(--primary)] transition-all duration-300 hover:bg-[var(--primary)] hover:text-white hover:gap-3 active:scale-[0.98]"
         >
-          Explore Export Solutions
+          Get Quote On Export Solutions
           <ArrowRight size={16} />
-        </Link>
+        </a>
       </div>
     </section>
   );
