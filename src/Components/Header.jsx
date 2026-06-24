@@ -133,11 +133,13 @@ export default function Header() {
               ))}
             </nav>
 
-            <a
-            href="tel:+918866003844"
-            className="mt-6 w-full rounded-full bg-[#7C5993] py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-              Enquire Now
-            </a>
+            <div>
+              <a
+              href="tel:+918866003844"
+              className="mt-6 w-full flex items-center justify-center rounded-full bg-[#7C5993] py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+                Enquire Now
+              </a>
+            </div>
           </div>
         </div>
       </div>

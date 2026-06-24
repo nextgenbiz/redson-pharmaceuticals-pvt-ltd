@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "info@redsonpharma.com",
+    value: "info@redsongroup.in",
   },
   {
     icon: MapPin,
@@ -196,7 +196,7 @@ export default function Contact() {
 
               <div className="pt-2">
                 <div className="flex flex-col gap-4">
-                  
+
                   {/* Primary Button */}
                   <button
                     type="submit"
