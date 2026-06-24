@@ -77,9 +77,11 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <button className="hidden lg:block rounded-[37px] border border-[#7C5993] px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold text-[#7C5993] transition-all duration-300 hover:bg-[#7C5993] hover:text-white">
+          <a 
+          href="tel:+918866003844"
+          className="hidden lg:block rounded-[37px] border border-[#7C5993] px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold text-[#7C5993] transition-all duration-300 hover:bg-[#7C5993] hover:text-white">
             Enquire Now
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -131,9 +133,11 @@ export default function Header() {
               ))}
             </nav>
 
-            <button className="mt-6 w-full rounded-full bg-[#7C5993] py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+            <a
+            href="tel:+918866003844"
+            className="mt-6 w-full rounded-full bg-[#7C5993] py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
               Enquire Now
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,38 +1,28 @@
 import {
-  BadgeCheck,
-  ShieldCheck,
-  FileCheck,
-  Award,
+  ArrowRight,
 } from "lucide-react";
 
 const certifications = [
   {
     title: "WHO-GMP Certified",
-    description:
-      "Manufacturing aligned with Good Manufacturing Practices for quality and safety.",
+    image: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.jpg",
+    file: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.pdf",
   },
   {
     title: "ISO Certified",
-    description:
-      "Structured systems ensuring consistency, documentation, and process excellence.",
+    image: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.jpg",
+    file: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.pdf",
   },
   {
-    title: "Quality Compliance",
-    description:
-      "Integrated quality assurance and control protocols across every production stage.",
+    title: "MSME Registered",
+    image: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.jpg",
+    file: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.pdf",
   },
   {
-    title: "Export Documentation Ready",
-    description:
-      "Complete documentation support for domestic supply and international exports.",
+    title: "Export License",
+    image: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.jpg",
+    file: "/certificates/REDSON PHARMACEUTICALS PRIVATE LIMITED_MSME UDYAM.pdf",
   },
-];
-
-const icons = [
-  BadgeCheck,
-  ShieldCheck,
-  FileCheck,
-  Award,
 ];
 
 export default function Certifications() {
@@ -60,42 +50,39 @@ export default function Certifications() {
         </div>
 
         {/* Trust Wall */}
-        <div className="mt-10 sm:mt-12 lg:mt-14 divide-y divide-[var(--primary)]/40 rounded-[24px] sm:rounded-[28px] border border-[var(--primary)]/40 bg-slate-50 shadow-sm">
-          {certifications.map((item, index) => {
-            const Icon = icons[index];
-
-            return (
-              <div
-                key={item.title}
-                className="group flex flex-col gap-4 sm:gap-5 px-4 sm:px-6 py-5 sm:py-6 transition-all duration-300 hover:bg-white md:flex-row md:items-center md:justify-between"
-              >
-                {/* Left */}
-                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
-                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--primary)]/10 transition-all duration-300 group-hover:bg-[var(--primary)]">
-                    <Icon
-                      size={20}
-                      className="text-[var(--primary)] transition-colors duration-300 group-hover:text-white"
-                    />
-                  </div>
-
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-slate-900">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-2 max-w-xl text-sm leading-6 sm:leading-7 text-slate-600">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Status */}
-                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[var(--primary)] md:shrink-0">
-                  Verified
-                </span>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {certifications.map((cert) => (
+            <div
+              key={cert.title}
+              className="group overflow-hidden rounded-[28px] border border-[var(--primary)]/40 bg-[var(--primary)]/5 shadow-sm transition hover:shadow-lg"
+            >
+              {/* Certificate Image */}
+              <div className="aspect-[4/3] overflow-hidden bg-slate-100">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="h-full w-full object-fit transition duration-300 group-hover:scale-103"
+                />
               </div>
-            );
-          })}
+
+              {/* Content */}
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {cert.title}
+                </h3>
+
+                <a
+                  href={cert.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center justify-center gap-1 text-sm font-medium text-[var(--primary)]"
+                >
+                  View Certificate
+                  <ArrowRight size={16}/>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

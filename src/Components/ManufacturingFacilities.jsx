@@ -13,7 +13,7 @@ const capabilities = [
   {
     title: "Tablet Manufacturing",
     subtitle: "Precision Solid Dosage Forms",
-    image: "/temp-img-01.png",
+    image: "/manufacturing-capabilities/tablet-manufacturing.jpg",
     description:
       "Comprehensive manufacturing of coated, chewable, dispersible, and sustained-release tablets with scalable production capacity.",
     features: [
@@ -26,7 +26,7 @@ const capabilities = [
   {
     title: "Capsule Manufacturing",
     subtitle: "Reliable Capsule Production",
-    image: "/temp-img-01.png",
+    image: "/manufacturing-capabilities/capsule-manufacturing.jpg",
     description:
       "High-quality hard gelatin capsule manufacturing supported by batch consistency and customized formulations.",
     features: [
@@ -39,7 +39,7 @@ const capabilities = [
   {
     title: "Injectable Manufacturing",
     subtitle: "Sterile & Critical Care Solutions",
-    image: "/temp-img-01.png",
+    image: "/manufacturing-capabilities/injectables-manufacturing.jpg",
     description:
       "Sterile injectable manufacturing with advanced filling systems and critical care production support.",
     features: [
@@ -52,7 +52,7 @@ const capabilities = [
   {
     title: "Liquid Oral Manufacturing",
     subtitle: "Pediatric & Adult Formulations",
-    image: "/temp-img-01.png",
+    image: "/manufacturing-capabilities/liquid-oral-manufacturing.jpg",
     description:
       "Manufacturing solutions for syrups, suspensions, oral liquids, and nutraceutical formulations.",
     features: [
@@ -65,7 +65,7 @@ const capabilities = [
   {
     title: "Eye Drops Manufacturing",
     subtitle: "Specialized Ophthalmic Solutions",
-    image: "/temp-img-01.png",
+    image: "/manufacturing-capabilities/eye-drop-manufacturing.jpg",
     description:
       "Sterile ophthalmic manufacturing backed by advanced quality systems and regulatory support.",
     features: [
@@ -78,7 +78,7 @@ const capabilities = [
   {
     title: "Veterinary Products",
     subtitle: "Animal Healthcare Solutions",
-    image: "/temp-img-01.png",
+    image: "/manufacturing-capabilities/veternery-products-manufacturing.jpg",
     description:
       "Dedicated manufacturing support for veterinary formulations and private-label healthcare products.",
     features: [

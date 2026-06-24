@@ -1,5 +1,4 @@
 import About from "@/Components/About";
-import CTA from "@/Components/CTA";
 import Contact from "@/Components/Contact";
 import Hero from "@/Components/Hero";
 import ManufacturingFacilities from "@/Components/ManufacturingFacilities";
@@ -35,7 +34,6 @@ export default function Home() {
     <FAQs/>
     {/* <WhyChooseUs/> */}
     {/* <ManufacturingProcess/> */}
-    {/* <CTA/> */}
     </>
   );
 }

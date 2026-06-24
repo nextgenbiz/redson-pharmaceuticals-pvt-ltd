@@ -4,8 +4,8 @@ import {
   Phone,
   Mail,
   MapPin,
-  ArrowRight,
   Factory,
+  ArrowUpRight,
 } from "lucide-react";
 
 const quickLinks = [
@@ -40,20 +40,28 @@ export default function Footer() {
             </h3>
           </div>
 
-          <div className="flex gap-3 divide-x divide-[red]">
+          <div className="grid md:grid-cols-[1fr_0.7fr] gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-transparent px-6 py-3 text-sm font-semibold text-white border border-[white] transition hover:scale-[1.02]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-transparent px-4 py-2 text-sm font-semibold text-white border border-[white] transition hover:scale-[1.02]"
             >
               Request Consultation
-              <ArrowRight size={16} />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/10">
+              <ArrowUpRight size={16} 
+              className="group-hover:-rotate-405 transition-all duration-500"
+              />
+              </div>
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white text-[var(--primary)] px-6 py-3 text-sm font-semibold transition hover:scale-[1.02]"
+              href="tel:+918866003844"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-white text-[var(--primary)] px-4 py-2 text-sm font-semibold transition hover:scale-[1.02]"
             >
               Call Now
-              <Phone size={16} />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/10">
+              <Phone size={16} 
+              className="group-hover:rotate-360 transition-all duration-500"
+              />
+              </div>
             </a>
           </div>
         </div>
@@ -133,7 +141,10 @@ export default function Footer() {
                   size={16}
                   className="mt-1 text-[var(--primary)]"
                 />
-                <a href="tel:918866003844" className="text-sm text-white/70">
+                <a 
+                href="tel:+918866003844"
+                className="text-sm text-white/70 transition-colors duration-300 hover:text-white"
+                >
                   +91 8866003844
                 </a>
               </div>
@@ -143,9 +154,12 @@ export default function Footer() {
                   size={16}
                   className="mt-1 text-[var(--primary)]"
                 />
-                <span className="text-sm text-white/70">
+                <a
+                  href="mailto:info@redsongroup.in"
+                  className="text-sm text-white/70 transition-colors duration-300 hover:text-white"
+                >
                   info@redsongroup.in
-                </span>
+                </a>
               </div>
 
               <div className="grid grid-cols-[0.05fr_1fr] items-start gap-3">
@@ -154,10 +168,10 @@ export default function Footer() {
                   className="mt-1 text-[var(--primary)]"
                 />
                 <p className="text-sm">
-                  Registered Office : 
+                  Office Address : 
                   {" "}
                 <span className="text-white/70">
-                  2, Radhe Kutir Bunglows, Near Safal Bunglows, Village Bhat, Dist.- Gandhinagar - 382428, Gujarat, India
+                  2, Radhe Kutir Bunglows, Near Safal Bunglows, Village Bhat, Dist.- Gandhinagar - 382428, Gujarat, India.
                 </span>
                 </p>
               </div>
@@ -192,303 +206,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
-
-
-
-
-
-
-// import Link from "next/link";
-// import {
-//   Phone,
-//   Mail,
-//   MapPin,
-// } from "lucide-react";
-
-// const quickLinks = [
-//   "About",
-//   "Manufacturing",
-//   "Quality",
-//   "Services",
-//   "Contact",
-// ];
-
-// const divisions = [
-//   "Tablets",
-//   "Capsules",
-//   "Injectables",
-//   "Liquid Orals",
-//   "Eye Drops",
-//   "Veterinary Products",
-// ];
-
-// export default function Footer() {
-//   return (
-//     <footer className="relative overflow-hidden bg-slate-950 text-white">
-//       {/* Background Glow */}
-//       <div className="absolute left-0 top-0 h-[280px] w-[280px] rounded-full bg-[var(--primary)]/10 blur-[100px]" />
-//       <div className="absolute right-0 bottom-0 h-[240px] w-[240px] rounded-full bg-[var(--primary)]/5 blur-[90px]" />
-
-//       <div className="relative mx-auto max-w-[1400px] px-6 pt-14 pb-8 lg:px-10">
-//         {/* Main Footer */}
-//         <div className="grid gap-10 border-b border-white/10 pb-10 md:grid-cols-2 xl:grid-cols-4">
-//           {/* Brand */}
-//           <div>
-//             <h3 className="text-2xl font-bold tracking-tight">
-//               REDSON Pharmaceuticals
-//             </h3>
-
-//             <p className="mt-4 text-sm leading-7 text-slate-400">
-//               Trusted pharmaceutical manufacturer, exporter, and supplier
-//               delivering quality-focused healthcare solutions across
-//               multiple dosage forms.
-//             </p>
-//           </div>
-
-//           {/* Quick Links */}
-//           <div>
-//             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-//               Quick Links
-//             </h4>
-
-//             <ul className="mt-4 space-y-3">
-//               {quickLinks.map((link) => (
-//                 <li key={link}>
-//                   <Link
-//                     href={`#${link.toLowerCase()}`}
-//                     className="text-sm text-slate-400 transition hover:text-white"
-//                   >
-//                     {link}
-//                   </Link>
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-
-//           {/* Divisions */}
-//           <div>
-//             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-//               Manufacturing
-//             </h4>
-
-//             <ul className="mt-4 space-y-3">
-//               {divisions.map((item) => (
-//                 <li
-//                   key={item}
-//                   className="text-sm text-slate-400"
-//                 >
-//                   {item}
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-
-//           {/* Contact */}
-//           <div>
-//             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-//               Contact
-//             </h4>
-
-//             <div className="mt-4 space-y-4">
-//               <div className="flex items-start gap-3">
-//                 <Phone
-//                   size={16}
-//                   className="mt-1 text-[var(--primary)]"
-//                 />
-//                 <span className="text-sm text-slate-400">
-//                   +91 8866003844
-//                 </span>
-//               </div>
-
-//               <div className="flex items-start gap-3">
-//                 <Mail
-//                   size={16}
-//                   className="mt-1 text-[var(--primary)]"
-//                 />
-//                 <span className="text-sm text-slate-400">
-//                   info@redsongroup.in
-//                 </span>
-//               </div>
-
-//               <div className="flex items-start gap-3">
-//                 <MapPin
-//                   size={16}
-//                   className="mt-1 text-[var(--primary)]"
-//                 />
-//                 <span className="text-sm text-slate-400">
-//                   Gandhinagar, Gujarat, India
-//                 </span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Bottom Strip */}
-//         <div className="flex flex-col gap-4 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-//           <p>
-//             © {new Date().getFullYear()} REDSON Pharmaceuticals Private Limited.
-//             All rights reserved.
-//           </p>
-
-//           <div className="flex gap-6">
-//             <Link
-//               href="/privacy-policy"
-//               className="transition hover:text-white"
-//             >
-//               Privacy Policy
-//             </Link>
-
-//             <Link
-//               href="/terms"
-//               className="transition hover:text-white"
-//             >
-//               Terms & Conditions
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-// import { Phone, MessageCircle, Pill, Syringe, FlaskConical, Tablet, } from "lucide-react";
-// import Link from "next/link";  
-
-//   export default function Footer() {
-//     return (
-//       <footer className="relative overflow-hidden bg-[#041225] text-white">
-//         {/* Watermark */}
-//         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-//           <span className="select-none text-[22rem] font-black tracking-wider text-white/[0.03]">
-//             ZIORA
-//           </span>
-//         </div>
-  
-//         <div className="relative z-10 mx-auto max-w-[1400px] px-4 pt-16">
-//           <div className="grid gap-12 lg:grid-cols-4">
-//             {/* Company Info */}
-//             <div>
-//               <div className="mb-8 flex items-center gap-3">
-//                 {/* Logo */}
-//                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-[#041225]">
-//                   <div className="relative h-7 w-7">
-//                     <span className="absolute left-0 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-current"></span>
-//                     <span className="absolute right-0 top-0 h-3 w-3 rounded-full bg-current"></span>
-//                     <span className="absolute right-0 bottom-0 h-3 w-3 rounded-full bg-current"></span>
-//                   </div>
-//                 </div>
-  
-//                 <div>
-//                   <h2 className="text-3xl font-bold tracking-wide">
-//                     ZIORA
-//                   </h2>
-//                   <p className="text-xs uppercase tracking-[0.25em] text-gray-400">
-//                     Pharmaceutical
-//                   </p>
-//                 </div>
-//               </div>
-  
-//               <p className="max-w-sm text-lg leading-relaxed text-slate-400">
-//                 Premium third-party pharmaceutical manufacturing in
-//                 Mohali, Punjab. WHO-GMP certified facility delivering
-//                 consistent quality and scalable supply.
-//               </p>
-  
-//               <button className="mt-8 rounded-full border border-cyan-500 bg-cyan-500/10 px-8 py-4 text-lg font-semibold text-cyan-400 transition hover:bg-cyan-500 hover:text-white">
-//                 Enquire Now
-//               </button>
-//             </div>
-  
-//             {/* Quick Links */}
-//             <div>
-//               <h3 className="mb-8 text-xl font-bold uppercase tracking-wide">
-//                 Quick Links
-//               </h3>
-  
-//               <ul className="space-y-5 text-lg text-slate-400">
-//                 <li>
-//                   <Link href="#">About</Link>
-//                 </li>
-//                 <li>
-//                   <Link href="#">Services</Link>
-//                 </li>
-//                 <li>
-//                   <Link href="#">Products</Link>
-//                 </li>
-//                 <li>
-//                   <Link href="#">Export</Link>
-//                 </li>
-//                 <li>
-//                   <Link href="#">Contact</Link>
-//                 </li>
-//               </ul>
-//             </div>
-  
-//             {/* Divisions */}
-//             <div>
-//               <h3 className="mb-8 text-xl font-bold uppercase tracking-wide">
-//                 Our Divisions
-//               </h3>
-  
-//               <ul className="space-y-5 text-lg text-slate-400">
-//                 <li className="flex items-center gap-3">
-//                   <Tablet size={18} />
-//                   Tablets
-//                 </li>
-  
-//                 <li className="flex items-center gap-3">
-//                   <Pill size={18} />
-//                   Capsules
-//                 </li>
-  
-//                 <li className="flex items-center gap-3">
-//                   <Syringe size={18} />
-//                   Injections
-//                 </li>
-  
-//                 <li className="flex items-center gap-3">
-//                   <FlaskConical size={18} />
-//                   Syrups
-//                 </li>
-//               </ul>
-//             </div>
-  
-//             {/* Contact */}
-//             <div>
-//               <h3 className="mb-8 text-xl font-bold uppercase tracking-wide">
-//                 Contact
-//               </h3>
-  
-//               <div className="space-y-5 text-lg text-slate-400">
-//                 <p>Mohali, Punjab - 160055</p>
-//                 <p>+91 73072 79050</p>
-//                 <p>info@ziorapharmaceutical.in</p>
-//                 <p>Mon - Sat: 9AM - 6PM</p>
-//               </div>
-//             </div>
-//           </div>
-  
-//           {/* Divider */}
-//           <div className="mt-16 border-t border-white/10" />
-  
-//           {/* Bottom */}
-//           <div className="py-6 flex flex-col gap-4 text-slate-500 md:flex-row md:items-center md:justify-between">
-//             <p>
-//               © 2026 Ziora Pharmaceuticals. All rights reserved.
-//             </p>
-//           </div>
-//         </div>
-//       </footer>
-// )};

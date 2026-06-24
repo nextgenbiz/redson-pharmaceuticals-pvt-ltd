@@ -70,7 +70,7 @@ export default function ContractManufacturing() {
               ))}
             </div>
             <a
-              href="#contact"
+              href="tel:+918866003844"
               className="group mt-6 sm:mt-8 inline-flex w-fit items-center gap-3 text-sm font-semibold text-[var(--primary)] transition-all duration-300"
             >
               Call Now
