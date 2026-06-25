@@ -2,11 +2,8 @@ import About from "@/Components/About";
 import Contact from "@/Components/Contact";
 import Hero from "@/Components/Hero";
 import ManufacturingFacilities from "@/Components/ManufacturingFacilities";
-import ManufacturingProcess from "@/Components/ManufacturingProcess";
-import ProductSection from "@/Components/ProductSection";
 import QualityCompliance from "@/Components/QualityCompliance";
 import Services from "@/Components/Services";
-import WhyChooseUs from "@/Components/WhyChooseUs";
 import ResearchDevelopment from "@/Components/ResearchDevelopment";
 import Certifications from "@/Components/Certifications";
 import Gallery from "@/Components/Gallery";
@@ -20,7 +17,6 @@ export default function Home() {
     <>
     <Hero/>
     <About/>
-    {/* <ProductSection/> */}
     <ManufacturingFacilities/>
     <Services/>
     <ContractManufacturing/>
@@ -32,8 +28,6 @@ export default function Home() {
     <Gallery/>
     <Contact/>
     <FAQs/>
-    {/* <WhyChooseUs/> */}
-    {/* <ManufacturingProcess/> */}
     </>
   );
 }
